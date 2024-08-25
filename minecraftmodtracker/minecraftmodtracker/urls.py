@@ -16,7 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from modtracker.views import ModInfoView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('modinfo/', ModInfoView.as_view())
 ]
